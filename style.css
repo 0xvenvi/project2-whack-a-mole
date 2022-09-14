@@ -1,0 +1,315 @@
+*{
+    padding: 0;
+    margin:0;
+    font-family: "Roboto Mono", monospace;
+}
+
+body{background-color: #c9dcaf;}
+
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #264b48;
+}
+
+h1{
+    padding: 10px;
+    color: white;
+
+}
+
+/* Modal Setting */
+.modalBtn{
+    height: 35px;
+    width: 50px;
+    position: fixed;
+    right: 10px;
+    font-size: 20px;
+    border-radius: 20px;
+}
+
+.modal{
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+  }
+
+  /* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+
+.gameSetting{    
+    display: flex;
+    height: 200px;
+    padding: 5px;
+    background-color: #c9dcaf;
+}
+
+.levelContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 10px;
+    width: 250px;
+
+}
+
+.gameLevelBtn{
+    display: flex;
+    align-items: center;
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+}
+
+.levelText{
+    font-size: 110%;
+    padding-left: 10px;
+    font-weight: bold;
+}
+#levelText{color:#d76735;}
+#score{color: teal;}
+#timeLeft{color: teal;}
+
+#startBtn{
+    height: 40px;
+    width: 200px;
+    font-size: 120%;
+
+    
+}
+
+
+.settingText{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    min-width: 250px;
+    width: fit-content;
+}
+
+.gameImage{
+    background-image: url(assets/mole3.jpg);
+    width: 100%;
+    background-size: contain;
+    background-position: center;
+    background-color: teal;
+}
+
+
+main{width: 100%;}
+
+.gridContainer{
+    display: grid;
+    padding: 20px 8%;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 1px;
+    background-image: url(assets/background4.jpg);
+    background-size: contain;
+
+}
+
+
+
+.squareGrid{
+    height: 120px;
+    border: 1px solid black;
+    background-color: #ffffff88;
+    background-image: url("assets/goldbar.png");
+    background-size: contain;
+    background-position: center;
+    cursor:url("assets/cursorHammer.png"), auto;
+    background-repeat: no-repeat;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+/* provide depth feel */
+.squareGrid:hover{box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.9);} 
+
+
+
+@media only screen and (max-width: 800px) {
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+.gameSetting{
+    display: flex;
+    flex-direction: column;
+    min-height: 280px;
+    align-items: center;
+    background-image: url(assets/mole3.jpg);
+    background-size: contain;
+}
+.settingText{
+    font-size: 12px;
+    background-color: #aaaaaa;
+}
+.levelContainer{
+    background-color: #aaaaaa;
+}
+h1{
+    font-size: 20px;
+}
+
+.gridContainer{
+    display: grid;
+    padding: 10px 3%;
+    grid-template-columns: auto auto auto auto auto auto;
+    gap: 1px;
+    background-image: url(assets/background4.jpg);
+    background-size: contain;
+
+}
+
+.squareGrid{
+    height: 100px;
+    background-image: url("assets/goldbar.png");
+    background-size: contain;
+    background-position: center;
+    cursor:url("assets/cursorHammer.png"), auto;
+    background-repeat: no-repeat;
+    
+ 
+}
+  }
+
+/* End Game */
+
+
+.congratsContainer{
+    display: none;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.5); /* Black w/ opacity */
+}
+
+
+/* Trophy Content */
+.trophyImage {
+    background-image: url(assets/trophy.gif);
+    width: 100%;
+    height: 100%;
+    position: inherit;
+    background-repeat: no-repeat;
+    background-position: center;
+    top: 0;
+    display: flex;
+    justify-content: center;
+
+  }
+
+  .trophyContent{
+    background-color: rgba(255, 255, 255, 0.75); 
+    width: 60%;
+    height: 25%;
+    min-width: fit-content;
+    margin-top:4%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding:5px;
+    border-radius: 10px;
+  }
+
+  .congratsText{font-size: 2.5em; font-weight:bolder; }
+  #congratsScoreText{font-size: 2em; font-weight:bolder;}
+
+  
+#playAgain{
+    margin: 10px;
+ font-size: 20px;
+    
+}
+
+
+
+
+
+
+/* Game Mode*/
+.mole{
+    background-image: url(assets/mole.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #e2cd6d;
+    border: 1px solid burlywood;
+
+    transform-style:preserve-3d;
+    transition: all 0.07s ease-in-out;
+}
+
+
+
+.angel{
+    background-image: url(assets/angel.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #ecead3;
+    border: 1px solid white;
+    transform-style:preserve-3d;
+    transition: all 0.07s ease-in-out;
+}
+
+.devil{
+    background-image: url(assets/devil.png);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background-color: #c08485;
+    border: 1px solid red;
+    transform-style:preserve-3d;
+    transition: all 0.07s ease-in-out;
+}
+
+
+#finalScore{color: #d76735; font-size: 1.2em;}
+#selectedLevelText{color: #d76735; font-size: 1.1em;}

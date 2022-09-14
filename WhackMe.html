@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Whack me!</title>
+    <link rel="shortcut icon" href="#">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="game.js" defer></script>
+</head>
+<body>
+    <!-- Game Title -->
+    <header>
+        <h1>I want you to Whack me!</h1>
+        <button id="modalBtn" class="modalBtn"> FAQ</button>
+        <div class="modal" id="myModal">
+            <div class="modal-content">
+                <h2>WELCOME TO THE GAME of WHACK! </h2>
+                <br>
+                <h3>GOAL:</h3>
+                <p> To get as much points as possible </p>
+                <br>
+                <h3>Game Mechanics</h3>
+                <p>Select a level that you want from Easy to Hard</p>
+                <p>Click the "Start" button and the game will start</p>
+                <p>using your cursor Hit the mole monster as many as you can in the given time span</p>
+                <br>
+                <h3>Tips</h3>
+                <p>1. Hit the Mole monster and you will get 1 point </p>
+                <p>2. Do not hit the Angel, you will get a minus 1 point</p>
+                <p>3. Do not hit the Devil, you will get a minus 2 points</p>
+                <br>
+                <h2>HAVE FUN!</h2>
+            </div>
+        </div>
+        
+    </header>
+
+    <!-- Game Setting -->
+    <div class="gameSetting">
+
+        <div class="settingText">
+            <h2>Level: <span id="levelText"> SELECT </span></h2>
+            <h2>Your Score: <span id="score"> 0</span> Points</h2>
+            <h2>Time Left: <span id="timeLeft"> 30 </span> seconds</h2>
+        </div>
+
+        <div class="gameImage">
+
+        </div class=startSettings>
+            <form class="levelContainer" action="" id="levelForm">
+                <label for="easy" class="gameLevelBtn easyContainer">
+                    <input type="radio" id="easy" value="easy" name="level" checked="checked">
+                    <span class="levelText">EASY</span> 
+                </label>
+
+                <label for="medium" class="gameLevelBtn mediumContainer">
+                    <input type="radio" id="medium" value="medium" name="level" >
+                    <span class="levelText">MEDIUM</span> 
+                </label>
+
+                <label for="hard" class="gameLevelBtn hardContainer">
+                    <input type="radio" id="hard" value="hard" name="level" >
+                    <span class="levelText">HARD</span> 
+                </label>
+
+                <input type="submit"  value="START" id="startBtn">
+            </form>
+        </div>
+
+    <main>
+        <div class="gridContainer">
+            <div class="squareGrid" id="s1"></div>
+            <div class="squareGrid" id="s2"></div>
+            <div class="squareGrid" id="s3"></div>
+            <div class="squareGrid" id="s4"></div>
+            <div class="squareGrid" id="s5"></div>
+            <div class="squareGrid" id="s6"></div>
+            <div class="squareGrid" id="s7"></div>
+            <div class="squareGrid" id="s8"></div>
+            <div class="squareGrid" id="s9"></div>
+            <div class="squareGrid" id="s10"></div>
+            <div class="squareGrid" id="s11"></div>
+            <div class="squareGrid" id="s12"></div>
+            <div class="squareGrid" id="s13"></div>
+            <div class="squareGrid" id="s14"></div>
+            <div class="squareGrid" id="s15"></div>
+            <div class="squareGrid" id="s16"></div>
+            <div class="squareGrid" id="s17"></div>
+            <div class="squareGrid" id="s18"></div>
+            <div class="squareGrid" id="s19"></div>
+            <div class="squareGrid" id="s20"></div>
+            <div class="squareGrid" id="s21"></div>
+            <div class="squareGrid" id="s22"></div>
+            <div class="squareGrid" id="s23"></div>
+            <div class="squareGrid" id="s24"></div>
+        </div>
+    </main>
+
+    <div class="congratsContainer">
+        <div class="trophyImage">
+            <div class="trophyContent">
+                <p class="congratsText">Congratulations!</p>
+                <br>
+                <h2>Level: <span id="selectedLevelText"> SELECT </span></h2>
+                <p id="congratsScoreText">Your Score: <span id="finalScore">0 </span> Points</p>
+                <button id="playAgain" onclick="clickPlayAgain()">Play Again</button>
+            </div>
+        </div>
+
+    </div>
+
+
+
+
+    
+</body>
+</html>
